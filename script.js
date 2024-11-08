@@ -8,7 +8,7 @@ let currentPage = 1;
 const rowsPerPage = 2; 
 function renderTable(page) {
     const tableBody = document.getElementById("customerTableBody");
-    tableBody.innerHTML = "";
+    //tableBody.innerHTML = "";
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
     const paginatedItems = customers.slice(start, end);
@@ -52,3 +52,5 @@ document.addEventListener('click', (e) => {
         e.target.textContent = e.target.classList.contains("active") ? "Active" : "Inactive";
     }
 }); document.add
+
+displayTablePage(currentPage);
