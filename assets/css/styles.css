@@ -55,7 +55,12 @@
     padding: 39px;
     margin-right: 71px;
     }
+    .logo{
+        display: flex;
+        align-items: center;
+    }
 .siderbar-title {
+    padding-left: 1px;
     margin-top: 0;
     font-weight: 600;
     font-size: 26px;
@@ -69,14 +74,45 @@
         color: #838383;
 }
 .sidebare-item{
-    margin: 40px 0;
+    margin: 20px 0;
     font-weight: 500;
         font-size: 14px;
         letter-spacing: -0.01em;
         color: #9197b3;
+        display: flex;
+        align-items: center;
+         gap: 14px;  
+        border-radius: 8px;
+            width: 230px;
+            height: 46px;
 }
+.right{
+margin-left: auto;
+}
+.sidebare-item.active{
+
+    color: #fff;
+    background-color: #7b4ded;
+
+
+border-radius: 8px;
+width: 230px;
+height: 46px;
+}
+
+.sidebare-item.active:hover {
+    background-color: #008767;
+    color: black;
+}
+.sidebare-item:hover {
+
+    color: black;
+}
+
+
+
 .navclass{
-margin-bottom: 250px;
+margin-bottom: 200px;
 }
 .sidebar-pro{
 text-align: center;
@@ -120,6 +156,18 @@ padding-left: 12px;
     display: flex;
     padding: 0, 200px;
     margin-bottom: 30px;
+    gap: 620px;
+}
+.search {
+    position: relative;
+    display: inline-block;
+}
+.search input {
+    background-image: url('../img/search\ 1.png');
+    background-position: 10px center;
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    
 }
 h1 {
     font-weight: 500;
@@ -228,6 +276,18 @@ color: #b5b7c0;
 background-color: #fafbff;
 padding: 8px;
 }
+.searchCustomer {
+    width: 150px;
+    height: 30px;
+    border: 1px none #ccc;
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: -0.01em;
+    color: #b5b7c0;
+    background-color: #fff;
+    padding: 8px;
+}
 .table {
     width: 100%;
     border-collapse: collapse;
@@ -278,7 +338,30 @@ width: 80px;
 }
 .pagination {
     display: flex;
-    gap: 500px;
+   
+    gap: 400px;
+    padding-bottom: 40px;
+    
+}
+.prePage {
+    
+            transform: scaleX(-1);
+        
+}
+.spanpag {
+border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 6px 9px;
+    width: 26px;
+    height: 24px;
+    margin-right: 3px;
+    margin-left: 3px;
+    background: #f5f5f5;
+    font-weight: 500;
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: -0.01em;
+        color: #404b52;
 }
 .paginationText{
     font-weight: 500;
@@ -286,3 +369,4 @@ width: 80px;
         letter-spacing: -0.01em;
         color: #b5b7c0;
 }
+

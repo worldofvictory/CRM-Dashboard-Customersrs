@@ -21,6 +21,7 @@ const customers = [
 
 let currentPage = 1;
 const rowsPerPage = 8; 
+renderTable(currentPage);
 function renderTable(page) {
     const tableBody = document.getElementById("customerTableBody");
     tableBody.innerHTML = "";
@@ -45,7 +46,7 @@ function renderTable(page) {
 
 
 function updatePageNumber() {
-    document.getElementById("pageNumber").textContent = `Page ${currentPage}`;
+    document.getElementById("pageNumber").textContent = ` ${currentPage}`;
 }
 document.getElementById("prevPage").addEventListener("click", () => {
     if (currentPage > 1)

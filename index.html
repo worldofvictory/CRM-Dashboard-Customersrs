@@ -16,17 +16,60 @@
   </head>
   <body>
     <aside class="sidebar">
-      <h2 class="siderbar-title">
-        Dashboard <span class="siderbar-decor">v.01</span>
-      </h2>
+      <div class="logo">
+        <svg width="37" height="37">
+          <use href="./assets/img/sprite.svg#dashboard" />
+        </svg>
+        <h2 class="siderbar-title">
+          Dashboard <span class="siderbar-decor">v.01</span>
+        </h2>
+      </div>
+
       <nav class="navclass">
         <ul>
-          <li class="sidebare-item"><a href="">Dashboar</a></li>
-          <li class="sidebare-item"><a href="">Product</a></li>
-          <li class="sidebare-item"><a href="">Customers</a></li>
-          <li class="sidebare-item"><a href="">Income</a></li>
-          <li class="sidebare-item"><a href="">Promote</a></li>
-          <li class="sidebare-item"><a href="">Help</a></li>
+          <li class="sidebare-item">
+            <img src="./assets/img/key-square.png" height="24" width="24" />
+            <a href="">Dashboar</a>
+          </li>
+
+          <li class="sidebare-item">
+            <img src="./assets/img/3d-square 1.png" height="24" width="24" />
+            <a href="">Product</a>
+            <img class="right" src="./assets/img/chevron-right 2.png" />
+          </li>
+          <li class="sidebare-item active">
+            <img
+              class="activeimg"
+              src="./assets/img/user-square 1.png"
+              height="24"
+              width="24"
+            />
+            <a class="active" href="">Customers</a>
+            <img class="right" src="./assets/img/chevron-right 2.png" />
+          </li>
+          <li class="sidebare-item">
+            <img src="./assets/img/wallet-money 2.png" height="24" width="24" />
+            <a href="">Income</a>
+            <img class="right" src="./assets/img/chevron-right 2.png" />
+          </li>
+          <li class="sidebare-item">
+            <img
+              src="./assets/img/discount-shape 1.png"
+              height="24"
+              width="24"
+            />
+            <a href="">Promote</a>
+            <img class="right" src="./assets/img/chevron-right 2.png" />
+          </li>
+          <li class="sidebare-item">
+            <img
+              src="./assets/img/message-question 1.png"
+              height="24"
+              width="24"
+            />
+            <a href="">Help</a>
+            <img class="right" src="./assets/img/chevron-right 2.png" />
+          </li>
         </ul>
       </nav>
       <div class="sidebar-pro">
@@ -52,7 +95,7 @@
         <!--частина зверху голови-->
         <h1>Hello Evano 👋🏼,</h1>
         <div class="search">
-          <input type="text" placeholder="Search" />
+          <input class="searchCustomer" type="text" placeholder="Search" />
         </div>
       </header>
       <!--Дописати верхню частину з картками-->
@@ -94,7 +137,9 @@
             <p class="subTitle">Active Members</p>
           </div>
           <div class="search-bar">
-            <input type="text" placeholder="Search" class="searchCustomers" />
+            <div class="search">
+              <input type="text" placeholder="Search" class="searchCustomers" />
+            </div>
             <div class="filterBack">
               <label class="short" for="filter">Short by:</label>
               <select id="filter" class="filterlabel">
@@ -122,9 +167,27 @@
           <p class="paginationText">Showing data 1 to 8 of 256K entries</p>
 
           <div class="table-pagination">
-            <button id="prevPage">Previous</button>
-            <span id="pageNumber"> 1 </span>
-            <button id="next">Next</button>
+            <button id="prevPage">
+              <img
+                class="prePage"
+                height="24"
+                width="24"
+                src="./assets/img/chevron-right 2.png"
+              />
+            </button>
+            <span class="spanpag" id="pageNumber">1</span>
+            <span class="spanpag" id="pageNumber">2</span>
+            <span class="spanpag" id="pageNumber">3</span>
+            <span class="spanpag" id="pageNumber">4</span>
+            <span>...</span>
+            <span class="spanpag" id="pageNumber">40</span>
+            <button id="next">
+              <img
+                height="24"
+                width="24"
+                src="./assets/img/chevron-right 2.png"
+              />
+            </button>
           </div>
         </div>
       </section>
