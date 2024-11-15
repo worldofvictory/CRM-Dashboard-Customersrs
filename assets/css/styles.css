@@ -27,18 +27,17 @@
 
 * {
     margin: 0;
-    /*background-color: var(--main-bg-color);*/
     font-family: -apple-system, BlinkMacSystemFont, 'Poppins', 'Segoe UI', 'Roboto', 'Helvetica Neue',
         sans-serif;
-        box-sizing: border-box;
+    box-sizing: border-box;
     }
 
 body {
-        display: flex;
-        margin: 0;
-        background: #fafbff;
-        width: 1440px;
-        border-radius: 20px;
+    display: flex;
+    margin: 0;
+    background: #fafbff;
+    width: 1440px;
+    border-radius: 20px;
     }
         @media (min-width: 1024px) {
             body {
@@ -160,7 +159,7 @@ body {
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0, 100px;
+    padding: 0;
     margin-bottom: 30px;
     gap: 20px;
 }
@@ -170,7 +169,7 @@ body {
 }
 .search input {
     width: 100%;
-    background-image: url('../img/search\ 1.png');
+    background-image: url('../img/search.png');
     background-position: 10px center;
     background-repeat: no-repeat;
     padding-left: 40px;
@@ -223,8 +222,40 @@ body {
 }
 .avatarUsers{
     display: flex;
+    justify-content: center;
+    position: relative;
 }
-    .customers-table{
+.avatarUsers img{
+    position: absolute;
+width: 30px;
+height: 30px;
+border-radius: 50%;
+border: 2px solid #fff;
+margin-left: 100px;
+}
+.avatarUsers img:nth-child(1) {
+    left: 0;
+    /* Перша аватарка */
+}
+
+.avatarUsers img:nth-child(2) {
+    left: 20px;
+    /* Друга аватарка зміщена на 10px праворуч */
+}
+
+.avatarUsers img:nth-child(3) {
+    left: 40px;
+    /* Третя аватарка зміщена на 20px праворуч */
+}
+.avatarUsers img:nth-child(4) {
+    left: 60px;
+    /* Третя аватарка зміщена на 20px праворуч */
+}
+.avatarUsers img:nth-child(5) {
+    left: 80px;
+    /* Третя аватарка зміщена на 20px праворуч */
+}
+.customers-table{
     background: #fff;
     border-radius: 20px;
     padding-top: 30px;
