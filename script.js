@@ -15,51 +15,69 @@ const customers = [
     { name: "Floyd Miles", company: "Yahoo", phone: "(205) 555-0100", email: "floyd@yahoo.com", country: "Kiribati", status: "inactive" },
     { name: "Floyd Miles", company: "Yahoo", phone: "(205) 555-0100", email: "floyd@yahoo.com", country: "Kiribati", status: "active" },
     { name: "Floyd Miles", company: "Yahoo", phone: "(205) 555-0100", email: "floyd@yahoo.com", country: "Kiribati", status: "active" },
-                 
-
 ];
 
-let currentPage = 1;
+let currentPage = 1; 
 const rowsPerPage = 8; 
-renderTable(currentPage);
+
+
 function renderTable(page) {
     const tableBody = document.getElementById("customerTableBody");
-    tableBody.innerHTML = "";
+    tableBody.innerHTML = ""; 
+
     const start = (page - 1) * rowsPerPage;
     const end = start + rowsPerPage;
     const paginatedItems = customers.slice(start, end);
+
     paginatedItems.forEach(customer => {
         const row = document.createElement("tr");
-        row.innerHTML = ` 
-        <td>${customer.name}</td> 
-        <td>${customer.company}</td> 
-        <td>${customer.phone}</td> 
-        <td>${customer.email}</td> 
-        <td>${customer.country}</td> 
-        <td><button class="status ${customer.status}">${customer.status.charAt(0).toUpperCase() + customer.status.slice(1)}
-        </button></td>
-         `;
+        row.innerHTML = `
+            <td>${customer.name}</td>
+            <td>${customer.company}</td>
+            <td>${customer.phone}</td>
+            <td>${customer.email}</td>
+            <td>${customer.country}</td>
+            <td>
+                <button class="status ${customer.status}">
+                    ${customer.status.charAt(0).toUpperCase() + customer.status.slice(1)}
+                </button>
+            </td>
+        `;
         tableBody.appendChild(row);
-    }); updatePageNumber();
-} 
+    });
 
-
-
-function updatePageNumber() {
-    document.getElementById("pageNumber").textContent = ` ${currentPage}`;
+    updatePageHighlight(page); 
 }
+
+
+function updatePageHighlight(page) {
+    const pageNumbers = document.querySelectorAll('.page-number');
+    pageNumbers.forEach(pageElement => {
+        pageElement.classList.toggle('active', parseInt(pageElement.getAttribute('data-page')) === page);
+    });
+}
+
 document.getElementById("prevPage").addEventListener("click", () => {
-    if (currentPage > 1)
-    { currentPage--; renderTable(currentPage); }
+    if (currentPage > 1) {
+        currentPage--;
+        renderTable(currentPage);
+    }
 });
-document.getElementById("next").addEventListener("click", () => {
-    if (currentPage * rowsPerPage < customers.length) { currentPage++; renderTable(currentPage); }
-});
-function updateInfoCards() {
-    document.getElementById("totalCustomers").querySelector("span").textContent = customers.length;
-    document.getElementById("totalMembers").querySelector("span").textContent = customers.filter(c => c.status === "active").length;
-}
 
+document.getElementById("next").addEventListener("click", () => {
+    if (currentPage * rowsPerPage < customers.length) {
+        currentPage++;
+        renderTable(currentPage);
+    }
+});
+
+document.querySelectorAll('.page-number').forEach(page => {
+    page.addEventListener('click', () => {
+        const pageNumber = parseInt(page.getAttribute('data-page'));
+        currentPage = pageNumber;
+        renderTable(currentPage);
+    });
+});
 
 document.addEventListener('click', (e) => {
     if (e.target.classList.contains("status")) {
@@ -67,5 +85,6 @@ document.addEventListener('click', (e) => {
         e.target.classList.toggle("inactive");
         e.target.textContent = e.target.classList.contains("active") ? "Active" : "Inactive";
     }
-}); document.add
+});
 
+renderTable(currentPage);
