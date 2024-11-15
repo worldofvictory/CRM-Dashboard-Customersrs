@@ -36,7 +36,7 @@ body {
     display: flex;
     margin: 0;
     background: #fafbff;
-    width: 1440px;
+    max-width: 100%;
     border-radius: 20px;
     }
         @media (min-width: 1024px) {
@@ -235,25 +235,18 @@ margin-left: 100px;
 }
 .avatarUsers img:nth-child(1) {
     left: 0;
-    /* Перша аватарка */
 }
-
 .avatarUsers img:nth-child(2) {
     left: 20px;
-    /* Друга аватарка зміщена на 10px праворуч */
 }
-
 .avatarUsers img:nth-child(3) {
     left: 40px;
-    /* Третя аватарка зміщена на 20px праворуч */
 }
 .avatarUsers img:nth-child(4) {
     left: 60px;
-    /* Третя аватарка зміщена на 20px праворуч */
 }
 .avatarUsers img:nth-child(5) {
     left: 80px;
-    /* Третя аватарка зміщена на 20px праворуч */
 }
 .customers-table{
     background: #fff;
@@ -264,7 +257,7 @@ margin-left: 100px;
     }
 .total{
     display: flex;
-    gap: 480px
+    gap: 480px;
     }
   
 .customerTitle{
