@@ -123,6 +123,11 @@ body {
     background: linear-gradient(45deg, #c3b2fa, #7b4ded, #5932ea);
     color: #fff;
 }
+@media (min-width: 1024px) {
+    body {
+       width: 100%;
+    }
+}
 .sidebar-button  {
     background-color: #fff;
     color:#5932ea;
