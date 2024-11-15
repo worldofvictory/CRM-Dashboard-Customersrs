@@ -45,6 +45,23 @@ body {
                 justify-content: center;  
             }
         }
+                @media (max-width: 767px) {
+                    body {
+                        flex-direction: column;
+                    }
+        
+                    .sidebar {
+                        width: 100%;                  
+                        margin-right: 0;
+                        margin-bottom: 20px;
+                        border-radius: 0;
+                       
+                    }
+        
+                    .main-content {
+                        padding-top: 10px;
+                    }
+                }
 .main-content {
     width: 968%;
     height: 812%;
@@ -261,9 +278,10 @@ margin-left: 100px;
     padding-left: 38px;
     overflow-x: auto;
     }
+
 .total{
     display: flex;
-    gap: 480px;
+    gap: 550px;
     }
   
 .customerTitle{
@@ -419,27 +437,3 @@ th{
     font-weight: bold;
 }
 
-@media (max-width: 768px) {
-
-    .searchCustomer {
-        font-size: 14px;
-        padding: 8px;
-    }
-
-    .search {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .searchCustomer {
-        width: 100%;
-    }
-}
-
-
-@media (min-width: 769px) {
-    .search {
-        flex-direction: row;
-        justify-content: flex-start;
-    }
-}
