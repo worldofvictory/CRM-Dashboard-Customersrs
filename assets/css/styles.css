@@ -171,6 +171,7 @@ body {
 .search {
     flex: 1;
     max-width: 300px;
+    width: 100%;      
 }
 .search input {
     width: 100%;
@@ -327,6 +328,7 @@ margin-left: 100px;
     color: #b5b7c0;
     background-color: #fff;
     padding: 8px;
+    width: 100%;
 }
 .table {
     width: 100%;
@@ -417,3 +419,27 @@ th{
     font-weight: bold;
 }
 
+@media (max-width: 768px) {
+
+    .searchCustomer {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    .search {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .searchCustomer {
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 769px) {
+    .search {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+}
