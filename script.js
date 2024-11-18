@@ -88,3 +88,10 @@ document.addEventListener('click', (e) => {
 });
 
 renderTable(currentPage);
+
+const sidebar = document.getElementById("sidebar");
+const toggleButton = document.getElementById("toggleSidebar");
+
+toggleButton.addEventListener("click", () => {
+    sidebar.classList.toggle("closed");
+});

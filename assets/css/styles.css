@@ -54,18 +54,20 @@ body {
                 
                                     .sidebar {
                                         width: 100%;
-                                        
+                                        position: fixed;
                                         margin-right: 0;
-                                        
+                                        top:0;
+                                        left: 0;
+                                        width: 100%;
                                         margin-bottom: 20px;
-                                      
+                                      z-index: 1000;
                                         border-radius: 0;
-                                     
+                                     flex: 0 0 50px;
                                     }
                 
                                     .main-content {
-                                        padding-top: 10px;
-                                        
+                                        padding-top: 100px;
+                                        flex: 1;
                                     }
                 
                                     
@@ -140,20 +142,29 @@ body {
                                        
                                         margin-top: 20px; 
                                 } }
+.container-all{
+    display: flex;
+    flex-wrap: nowrap;
+}
 
 .main-content {
     width: 968%;
     height: 812%;
     flex: 1;
+    overflow-x: hidden;
     padding: 38px;
     border-radius: 20px;
 }
 .sidebar {
     box-shadow: 0 10px 60px 0 rgba(226, 236, 249, 0.5);
     background: #fff;
-    width: 100%;
+    max-width: 250px;
+    min-width: 50px;
     padding: 39px;
     margin-right: 71px;
+    flex: 0 0 250px;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
     }
         @media (min-width: 768px) {
             .sidebar {
@@ -161,6 +172,24 @@ body {
                 margin-right: 30px;
             }
         }
+
+                .sidebar.closed {
+                    flex: 0 0 0;
+                    max-width: 0;
+                }
+        
+                #toggleSidebar {
+                    position: absolute;
+                    top: 10px;
+                    left: 10px;
+                    z-index: 1000;
+                    background-color: #5932ea;
+                    color: white;
+                    border: none;
+                    padding: 10px;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
 .logo{
     display: flex;
     align-items: center;
