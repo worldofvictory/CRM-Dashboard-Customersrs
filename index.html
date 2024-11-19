@@ -11,235 +11,236 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="./assets/css/styles.css" />
     <link rel="stylesheet" href="./assets/css/reset.css" />
   </head>
   <body>
-    <div class="container-all">
-      <aside class="sidebar" id="sidebar">
-        <div class="logo">
-          <svg width="37" height="37">
-            <use href="./assets/img/sprite.svg#dashboard" />
-          </svg>
-          <h2 class="siderbar-title">
-            Dashboard <span class="siderbar-decor">v.01</span>
-          </h2>
+    <aside class="sidebar" id="sidebar">
+      <div class="logo">
+        <svg width="37" height="37">
+          <use href="./assets/img/sprite.svg#dashboard" />
+        </svg>
+        <h2 class="siderbar-title">
+          Dashboard <span class="siderbar-decor">v.01</span>
+        </h2>
+      </div>
+      <button class="toggle-btn" id="toggleSidebar">☰</button>
+   <nav class="navclass">
+        <ul>
+          <li class="sidebare-item">
+            <img
+              src="./assets/img/key-square.png"
+              height="24"
+              width="24"
+              alt="key-square"
+            />
+            <a href="">Dashboar</a>
+          </li>
+          <li class="sidebare-item">
+            <img
+              src="./assets/img/3d-square.png"
+              height="24"
+              width="24"
+              alt="3d-square"
+            />
+            <a href="">Product</a>
+            <img
+              class="right"
+              src="./assets/img/chevron-right.png"
+              alt="chevron-right"
+            />
+          </li>
+          <li class="sidebare-item active">
+            <img
+              class="activeimg"
+              src="./assets/img/user-square.png"
+              height="24"
+              width="24"
+              alt="user square"
+            />
+            <a class="active" href="">Customers</a>
+            <img
+              class="right"
+              src="./assets/img/chevron-right.png"
+              alt="chevron-right"
+            />
+          </li>
+          <li class="sidebare-item">
+            <img
+              src="./assets/img/wallet-money.png"
+              height="24"
+              width="24"
+              alt="wallet"
+            />
+            <a href="">Income</a>
+            <img
+              class="right"
+              src="./assets/img/chevron-right.png"
+              alt="chevron-right"
+            />
+          </li>
+          <li class="sidebare-item">
+            <img
+              src="./assets/img/discount-shape.png"
+              height="24"
+              width="24"
+              alt="discount"
+            />
+            <a href="">Promote</a>
+            <img
+              class="right"
+              src="./assets/img/chevron-right.png"
+              alt="chevron-right"
+            />
+          </li>
+          <li class="sidebare-item">
+            <img
+              src="./assets/img/message-question.png"
+              height="24"
+              width="24"
+              alt="question part"
+            />
+            <a href="">Help</a>
+            <img
+              class="right"
+              src="./assets/img/chevron-right.png"
+              alt="chevron-right"
+            />
+          </li>
+        </ul>
+      </nav>
+      <div class="sidebar-pro">
+        <p>Upgrade to PRO to get access all features!</p>
+        <button class="sidebar-button" type="button">Get Pro Now!</button>
+      </div>
+      <div class="user">
+        <img
+          src="./assets/img/userx1.png"
+          alt="user foto"
+          width="42"
+          height="42"
+        />
+        <div class="user-info">
+          <p class="user-name">Evano</p>
+          <p class="user-prof">Project Manager</p>
         </div>
-
-        <nav class="navclass">
-          <ul>
-            <li class="sidebare-item">
-              <img
-                src="./assets/img/key-square.png"
-                height="24"
-                width="24"
-                alt="key-square"
-              />
-              <a href="">Dashboar</a>
-            </li>
-
-            <li class="sidebare-item">
-              <img
-                src="./assets/img/3d-square.png"
-                height="24"
-                width="24"
-                alt="3d-square"
-              />
-              <a href="">Product</a>
-              <img
-                class="right"
-                src="./assets/img/chevron-right.png"
-                alt="chevron-right"
-              />
-            </li>
-            <li class="sidebare-item active">
-              <img
-                class="activeimg"
-                src="./assets/img/user-square.png"
-                height="24"
-                width="24"
-                alt="user square"
-              />
-              <a class="active" href="">Customers</a>
-
-              <img
-                class="right"
-                src="./assets/img/chevron-right.png"
-                alt="chevron-right"
-              />
-            </li>
-            <li class="sidebare-item">
-              <img
-                src="./assets/img/wallet-money.png"
-                height="24"
-                width="24"
-                alt="wallet"
-              />
-              <a href="">Income</a>
-              <img
-                class="right"
-                src="./assets/img/chevron-right.png"
-                alt="chevron-right"
-              />
-            </li>
-            <li class="sidebare-item">
-              <img
-                src="./assets/img/discount-shape.png"
-                height="24"
-                width="24"
-                alt="discount"
-              />
-              <a href="">Promote</a>
-              <img
-                class="right"
-                src="./assets/img/chevron-right.png"
-                alt="chevron-right"
-              />
-            </li>
-            <li class="sidebare-item">
-              <img
-                src="./assets/img/message-question.png"
-                height="24"
-                width="24"
-                alt="question part"
-              />
-              <a href="">Help</a>
-              <img
-                class="right"
-                src="./assets/img/chevron-right.png"
-                alt="chevron-right"
-              />
-            </li>
-          </ul>
-        </nav>
-        <div class="sidebar-pro">
-          <p>Upgrade to PRO to get access all features!</p>
-          <button class="sidebar-button" type="button">Get Pro Now!</button>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="header">
+        <h1 class="header-title">Hello Evano 👋🏼,</h1>
+        <div class="search">
+          <input class="searchCustomer" type="text" placeholder="Search" />
         </div>
-        <div class="user">
-          <img
-            src="./assets/img/userx1.png"
-            alt="user foto"
-            width="42"
-            height="42"
-          />
-          <div class="user-info">
-            <p class="user-name">Evano</p>
-            <p class="user-prof">Project Manager</p>
-          </div>
-        </div>
-      </aside>
-      <main class="main-content">
-        <button id="toggleSidebar">=</button>
-        <!--весь кусочок з права-->
-        <header class="header">
-          <!--частина зверху голови-->
-          <h1 class="header-title">Hello Evano 👋🏼,</h1>
-          <div class="search">
-            <input class="searchCustomer" type="text" placeholder="Search" />
-          </div>
-        </header>
-        <!--Дописати верхню частину з картками-->
-        <section class="infoStatistic">
-          <ul class="statistics">
-            <li class="statistic">
-              <img src="" alt="icon1" />
-              <p class="statisticText">Total Customers</p>
-              <h3 class="statisticName">5,423</h3>
-              <p class="smallText">+16% this month</p>
-            </li>
-
-            <li class="statistic">
-              <img src="" alt="icon1" />
-              <p class="statisticText">Members</p>
-              <h3 class="statisticName">1,893</h3>
-              <p class="smallText">-1% this month</p>
-            </li>
-
-            <li class="statistic">
-              <img src="" alt="icon1" />
-              <p class="statisticText">Active Now</p>
-              <h3 class="statisticName">189</h3>
-              <div class="avatarUsers">
-                <img src="./assets/img/avataaar.png" alt="user1" />
-                <img src="./assets/img/avataaars1.png" alt="user2" />
-                <img src="./assets/img/avatar2.png" alt="user3" />
-                <img src="./assets/img/avatar3.png" alt="user4" />
-                <img src="./assets/img/avatar4.png" alt="user5" />
-              </div>
-            </li>
-          </ul>
-        </section>
-        <!--таблиця-->
-        <section class="customers-table">
-          <div class="total">
-            <div class="customer-search">
-              <h2 class="customerTitle">All Customers</h2>
-              <p class="subTitle">Active Members</p>
+      </header>
+      <section class="infoStatistic">
+        <ul class="statistics">
+          <li class="statistic">
+            <div class="icon-placeholder">
+              <span> &#128100</span>
             </div>
-            <div class="search-bar">
-              <div class="search">
-                <input
-                  type="text"
-                  placeholder="Search"
-                  class="searchCustomers"
-                />
-              </div>
-              <div class="filterBack">
-                <label class="short" for="filter">Short by:</label>
-                <select id="filter" class="filterlabel">
-                  <option value="all">Newest</option>
-                  <option value="category1">Oldest</option>
-                </select>
-              </div>
+            <div class="stat-details">
+            <p class="statisticText">Total Customers</p>
+            <h3 class="statisticName">5,423</h3>
+            <p class="smallText">+16% this month</p>
+            </div> 
+          </li>
+        <div class="divider"></div>
+          <li class="statistic">
+             <div class="icon-placeholder">
+              <span> &#128101</span>
             </div>
+            <div class="stat-details">
+            <p class="statisticText">Members</p>
+            <h3 class="statisticName">1,893</h3>
+            <p class="smallText">-1% this month</p>
+            </div>
+          </li>
+       <div class="divider"></div>
+          <li class="statistic">
+             <div class="icon-placeholder">
+              <span> &#128102</span>
+            </div>
+            <div class="stat-details">
+            <p class="statisticText">Active Now</p>
+            <h3 class="statisticName">189</h3>
+            <div class="avatarUsers">
+              <img src="./assets/img/avataaar.png" alt="user1" />
+              <img src="./assets/img/avataaars1.png" alt="user2" />
+              <img src="./assets/img/avatar2.png" alt="user3" />
+              <img src="./assets/img/avatar3.png" alt="user4" />
+              <img src="./assets/img/avatar4.png" alt="user5" />
+            </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="customers-table">
+        <div class="total">
+          <div class="customer-search">
+            <h2 class="customerTitle">All Customers</h2>
+            <p class="subTitle">Active Members</p>
           </div>
-
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Customer Name</th>
-                <th>Company</th>
-                <th>Phone Number</th>
-                <th>Email</th>
-                <th>Country</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody id="customerTableBody"></tbody>
-          </table>
-          <div class="pagination">
-            <p class="paginationText">Showing data 1 to 8 of 256K entries</p>
-
-            <div class="table-pagination">
-              <button id="prevPage" class="pagButton">
-                <img
-                  class="prePage"
-                  height="16"
-                  width="20"
-                  src="./assets/img/chevron-right.png"
-                  alt="chevron-right"
-                />
-              </button>
-              <span class="spanpag page-number active" data-page="1">1</span>
-              <span class="spanpag page-number" data-page="2">2</span>
-              <span class="spanpag page-number" data-page="3">3</span>
-              <span class="spanpag page-number" data-page="4">4</span>
-              <span>...</span>
-              <span class="spanpag page-number" data-page="40">40</span>
-              <button id="next" class="pagButton">
-                <img
-                  height="16"
-                  width="20"
-                  src="./assets/img/chevron-right.png"
-                  alt="chevron-left"
-                />
-              </button>
+          <div class="search-bar">
+            <div class="search">
+              <input type="text" placeholder="Search" class="searchCustomers" />
+            </div>
+            <div class="filterBack">
+              <label class="short" for="filter">Short by:</label>
+              <select id="filter" class="filterlabel">
+                <option value="all">Newest</option>
+                <option value="category1">Oldest</option>
+              </select>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
+        </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Customer Name</th>
+              <th>Company</th>
+              <th>Phone Number</th>
+              <th>Email</th>
+              <th>Country</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="customerTableBody"></tbody>
+        </table>
+        <div class="pagination">
+          <p class="paginationText">Showing data 1 to 8 of 256K entries</p>
+        <div class="table-pagination">
+            <button id="prevPage" class="pagButton">
+              <img
+                class="prePage"
+                height="16"
+                width="20"
+                src="./assets/img/chevron-right.png"
+                alt="chevron-right"
+              />
+            </button>
+            <span class="spanpag page-number active" data-page="1">1</span>
+            <span class="spanpag page-number" data-page="2">2</span>
+            <span class="spanpag page-number" data-page="3">3</span>
+            <span class="spanpag page-number" data-page="4">4</span>
+            <span>...</span>
+            <span class="spanpag page-number" data-page="40">40</span>
+            <button id="next" class="pagButton">
+              <img
+                height="16"
+                width="20"
+                src="./assets/img/chevron-right.png"
+                alt="chevron-left"
+              />
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
     <script type="module" src="./script.js"></script>
   </body>
 </html>

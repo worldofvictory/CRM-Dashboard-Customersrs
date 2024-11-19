@@ -89,9 +89,18 @@ document.addEventListener('click', (e) => {
 
 renderTable(currentPage);
 
-const sidebar = document.getElementById("sidebar");
-const toggleButton = document.getElementById("toggleSidebar");
-
-toggleButton.addEventListener("click", () => {
-    sidebar.classList.toggle("closed");
+const sidebar = document.getElementById('sidebar');
+const toggleSidebar = document.getElementById('toggleSidebar');
+if (window.innerWidth <= 768) {
+    sidebar.classList.add('collapsed');
+}
+toggleSidebar.addEventListener('click', () => {
+    sidebar.classList.toggle('collapsed');
+});
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        sidebar.classList.remove('collapsed');
+    } else {
+        sidebar.classList.add('collapsed');
+    }
 });
